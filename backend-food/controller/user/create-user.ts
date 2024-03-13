@@ -1,9 +1,9 @@
 import { Response, Request } from "express";
-import { createUSerQuery } from "../../query/user";
+import { createUserQuery } from "../../query";
 
 export const createUseController= async (req:Request, res:Response) => {
     try{    
-        const user= await createUSerQuery(req);
+        const user= await createUserQuery(req);
         res.json(user);
 
     } catch (error:any) {

@@ -1,8 +1,8 @@
 import { Request } from "express";
-import { UserModel} from "../../db/models/user";
+import { UserModel} from "../../db/models";
 import { passwordHash } from "../../utils";
 
-export const createUSerQuery = async (req: Request) => {
+export const createUserQuery = async (req: Request) => {
 
     try {
         const {name, email, phone, password} = req.body;
